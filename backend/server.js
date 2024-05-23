@@ -14,7 +14,7 @@ app.use("/api/projects", routes);
 
 connectDB();
 
-app.get('/', (req, res) => res.send('Hello world!'));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, "../frontend/index.html")));
 
 const port = process.env.PORT || 4001;
 
