@@ -5,7 +5,7 @@ import './index.css'
 
 // Pages
 import Main from "./pages/Main.jsx";
-import AllProjects from './pages/AllProjects.jsx';
+import AllProjects from "./pages/allProjects.jsx";
 
 // Routes
 const router = createBrowserRouter([
