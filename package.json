@@ -14,9 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "concurrently": "~8.2.2",
     "dotenv": "~16.4.5",
     "node": "~18.20.3",
+    "react-bootstrap": "^2.10.2",
     "vite": "~5.2.11"
   }
 }

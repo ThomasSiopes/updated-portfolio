@@ -4,11 +4,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css'
 
 // Pages
-import AllProjects from './pages/allProjects.jsx';
+import Main from "./pages/Main.jsx";
+import AllProjects from './pages/AllProjects.jsx';
 
 // Routes
 const router = createBrowserRouter([
-  {path: "/", element: <div>Hello! This is the main page!</div>},
+  {path: "/", element: <Main/>},
   {path: "/allProjects", element: <AllProjects/>},
 ]);
 
