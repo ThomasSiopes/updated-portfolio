@@ -8,7 +8,7 @@
     "dev": "concurrently \"cd backend && npm run start\" \"cd frontend && npm run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "concurrently \"cd backend && npm install\" \"cd frontend && npm install\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
