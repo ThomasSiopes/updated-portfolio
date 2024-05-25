@@ -7,14 +7,14 @@ import './App.css'
 
 //Pages
 const Home = React.lazy(() => import("./pages/Main"));
-// const AllProjects = React.lazy(() => import("./pages/allProjects"));
+const Projects = React.lazy(() => import("./pages/Projects"));
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home/>}/>
-        {/* <Route exact path="/allProjects" element={<AllProjects/>}/> */}
+        <Route exact path="/" element={<React.Suspense><Home/></React.Suspense>}/>
+        <Route exact path="/allprojects" element={<React.Suspense><Projects/></React.Suspense>}/>
       </Routes>
     </Router>
   )
