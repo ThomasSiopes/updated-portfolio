@@ -7,14 +7,14 @@ import './App.css'
 
 //Pages
 const Home = React.lazy(() => import("./pages/Main"));
-const AllProjects = React.lazy(() => import("./pages/allProjects"));
+// const AllProjects = React.lazy(() => import("./pages/allProjects"));
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/allProjects" element={<AllProjects/>}/>
+        {/* <Route exact path="/allProjects" element={<AllProjects/>}/> */}
       </Routes>
     </Router>
   )
