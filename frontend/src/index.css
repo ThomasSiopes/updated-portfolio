@@ -46,6 +46,10 @@
 
 /*  */
 
+#filters li {
+    display: inline-block;
+}
+
 .font-questrial {
     font-family: 'Questrial', sans-serif;
 }

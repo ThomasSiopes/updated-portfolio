@@ -21,7 +21,7 @@ export const darkTheme = {
     displayL: "inline",
     displayD: "none",
     greenBodyColor: "#198754",
-    greenBodyBorder: "none",
+    greenBodyBorder: "solid 1px #198754",
     projectLink: "solid 1.5px #fff",
     navColor: "#fff",
     navColor2: "#ccc",
@@ -48,23 +48,19 @@ export const GlobalStyles = createGlobalStyle`
         border-radius: 20px;
     }
 
-    .btn-success-inverse {
+    .btn-green-inverse {
         color: ${(props) => props.theme.fontColor};
         background-color: ${(props) => props.theme.btnInverse1};
         border-color: ${(props) => props.theme.btnInverse1};
     }
 
-    .btn-success-inverse:hover, .btn-success-inverse:active, .btn-success-inverse-activated {
+    .btn-green-inverse:hover, .btn-green-inverse:active, .btn-green-inverse-activated {
         color: ${(props) => props.theme.fontColor}!important;
         background-color: ${(props) => props.theme.btnInverse2}!important;
         border-color: ${(props) => props.theme.btnInverse2}!important;
     }
 
-    .genText {
-        color: ${(props) => props.theme.fontColor};
-    }
-
-    .genText:hover {
+    .genText, .genText:hover, .nav-link {
         color: ${(props) => props.theme.fontColor};
     }
 `;

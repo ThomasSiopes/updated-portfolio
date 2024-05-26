@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import FilteredList from "../components/FilteredList";
 import { Container } from "react-bootstrap";
 
 function Projects() {
@@ -24,7 +25,7 @@ function Projects() {
         const newTag = event.target.title;
         let tagsCopy = [...filter.tags];
 
-        if(!filter.tags.includes(newTag)) tagsCopy.push(newTag);
+        if(filter.tags && !filter.tags.includes(newTag)) tagsCopy.push(newTag);
         event.target.activeattribute = "true";
 
         setFilter({...filter, tags: tagsCopy});
@@ -35,7 +36,7 @@ function Projects() {
         event.target.classList.add("btn-green-inverse");
         let copyTags = [...filter.tags];
 
-        if(copyTags.includes(event.target.title)) copyTags.splice(copyTags.indexOf(event.target.title), 1);
+        if(copyTags && copyTags.includes(event.target.title)) copyTags.splice(copyTags.indexOf(event.target.title), 1);
         event.target.activeattribute = "false";
 
         setFilter({...filter, tags: copyTags});
@@ -52,7 +53,6 @@ function Projects() {
     }
 
     const updateTags = (event) => {
-        console.log(event.target.activeattribute);
         (event.target.activeattribute === "false" || event.target.activeattribute === undefined) ? addTags(event) : removeTags(event);
     }
     
@@ -79,7 +79,7 @@ function Projects() {
                         <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="CSS">CSS</span>
                     </li>
                     <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="JavaScript">JavaScript</span>
+                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="Javascript">JavaScript</span>
                     </li>
                     <li className="m-1" onClick={updateTags}>
                         <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="React">React</span>
@@ -98,6 +98,7 @@ function Projects() {
                     </li>
                 </ul>
             </div>
+            <FilteredList projectList={projectList} chosenTags={filter.tags}/>
         </Container>
     )
 }

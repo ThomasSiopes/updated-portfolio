@@ -7,7 +7,7 @@ import Intro from "../components/Intro";
 
 function Main() {
     return(
-        <div id="intro" className="text-center">
+        <div id="intro" className="text-center mt-nav">
             <Intro/>
             <Row>
                 <Col className="pe-0 align-items-center"><hr/></Col>
