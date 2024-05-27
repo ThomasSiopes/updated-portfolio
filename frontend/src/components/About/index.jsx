@@ -1,17 +1,53 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 const AboutMe = () => {
     return(
-        <Container>
+        <Container className="fullscreen">
             <Row>
-                <Col xs={12} md={7}>
-                    <Row>
-                        Stuff I know
-                    </Row>
+                <Col xs={12} lg={4} className="px-5">
+                    <Card className="font-questrial bg-green genText rounded mb-3">
+                        <Card.Title className="py-3 mb-0">Front-End</Card.Title>
+                        <Card.Body className="pt-0">
+                            <ul className="noDecor ps-0 mb-0">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>React</li>
+                                <li>JQuery</li>
+                                <li>Handlebars</li>
+                                <li>Bootstrap and similar frameworks</li>
+                                <li>PHP</li>
+                            </ul>
+                        </Card.Body>
+                    </Card>
                 </Col>
-                <Col>
-                    <p>Pic of me and maybe about me stuff idk</p>
+                <Col xs={12} lg={4} className="px-5">
+                    <Card className="font-questrial bg-green genText rounded mb-3">
+                        <Card.Title className="py-3 mb-0">Back-End</Card.Title>
+                        <Card.Body className="pt-0">
+                            <ul className="noDecor ps-0 mb-0">
+                                <li>Node.js</li>
+                                <li>MySQL</li>
+                                <li>Mongoose & MongoDB</li>
+                            </ul>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col xs={12} lg={4} className="px-5">
+                    <Card className="font-questrial bg-green genText rounded mb-3">
+                        <Card.Title className="py-3 mb-0">Tools of Development</Card.Title>
+                        <Card.Body className="pt-0">
+                            <ul className="noDecor ps-0 mb-0">
+                                <li>Github</li>
+                                <li>Heroku</li>
+                                <li>Visual Studio Code</li>
+                                <li>Brackets</li>
+                                <li>MySQL Workbench</li>
+                                <li>XAMPP</li>
+                            </ul>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
         </Container>

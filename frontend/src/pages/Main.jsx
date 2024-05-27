@@ -7,11 +7,11 @@ import Intro from "../components/Intro";
 
 function Main() {
     return(
-        <div id="intro" className="text-center mt-nav">
+        <div id="intro" className="text-center">
             <Intro/>
-            <Row>
+            <Row className="font-questrial genText py-5" id="about">
                 <Col className="pe-0 align-items-center"><hr/></Col>
-                <Col xs={4} md={2} xl={1} className="text-center pt-1 px-0" id="about">About Me</Col>
+                <Col xs={4} md={2} xl={1} className="text-center pt-1 px-0">About Me</Col>
                 <Col className="pe-0 align-items-center"><hr/></Col>
             </Row>
             <About/>

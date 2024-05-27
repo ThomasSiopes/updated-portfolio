@@ -54,6 +54,10 @@
     font-family: 'Questrial', sans-serif;
 }
 
+.fullscreen {
+    min-height: 100vh;
+}
+
 #mainBody {
     min-height: 91vh;
 }

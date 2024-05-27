@@ -60,7 +60,7 @@ export const GlobalStyles = createGlobalStyle`
         border-color: ${(props) => props.theme.btnInverse2}!important;
     }
 
-    .genText, .genText:hover, .nav-link {
+    .genText, .genText:hover, .nav-link, .nav-link:active {
         color: ${(props) => props.theme.fontColor};
     }
 `;

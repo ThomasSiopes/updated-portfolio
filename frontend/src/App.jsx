@@ -39,7 +39,7 @@ function App() {
         <GlobalStyles/>
         <React.Suspense fallback={<div>Loading...</div>}>
           <section className="fixed-top">
-            <Navbar bg="navbar" variant="dark" className="font-questrial">
+            <Navbar bg="navbar" className="font-questrial">
               <Container>
                 <span className="float-left d-xs-inline d-md-none">
                   <Button className="rounded-0 btn-contact-sm btn-github" href="https://github.com/ThomasSiopes"><FaGithub/></Button>
