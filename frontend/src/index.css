@@ -44,7 +44,12 @@
     max-width: 6vh;
 }
 
-/*  */
+/* General Fundamental Elements */
+
+.card img {
+    border-radius: 19.5px;
+    max-width: 100%;
+}
 
 #filters li {
     display: inline-block;

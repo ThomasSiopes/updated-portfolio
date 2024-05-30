@@ -5,7 +5,7 @@ const AboutMe = () => {
     return(
         <Container className="fullscreen">
             <Row>
-                <Col xs={12} lg={4} className="px-5">
+                <Col xs={6} lg={4}>
                     <Card className="font-questrial bg-green genText rounded mb-3">
                         <Card.Title className="py-3 mb-0">Front-End</Card.Title>
                         <Card.Body className="pt-0">
@@ -22,7 +22,7 @@ const AboutMe = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xs={12} lg={4} className="px-5">
+                <Col xs={6} lg={4}>
                     <Card className="font-questrial bg-green genText rounded mb-3">
                         <Card.Title className="py-3 mb-0">Back-End</Card.Title>
                         <Card.Body className="pt-0">
@@ -34,7 +34,7 @@ const AboutMe = () => {
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col xs={12} lg={4} className="px-5">
+                <Col xs={6} lg={4}>
                     <Card className="font-questrial bg-green genText rounded mb-3">
                         <Card.Title className="py-3 mb-0">Tools of Development</Card.Title>
                         <Card.Body className="pt-0">

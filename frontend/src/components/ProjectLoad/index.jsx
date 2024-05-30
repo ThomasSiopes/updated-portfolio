@@ -7,7 +7,7 @@ const ProjectLoad = (input) => {
     return(
         <Container>
             <Card className="text-center border-green font-questrial">
-                {project.thumbnail && <Card.Img src={`./assets/images/${project.thumbnail}`} alt="Preview failed to load"/>}
+                {project.thumbnail && <Card.Img src={`/images/${project.thumbnail}`} alt="Preview failed to load"/>}
                 <Card.Title className="m-2">{project.title}</Card.Title>
                 {project.description && <Card.Body className="pt-1">{project.description}</Card.Body>}
                 {project.status && <Card.Body className="pt-1">Status: {project.status}</Card.Body>}
