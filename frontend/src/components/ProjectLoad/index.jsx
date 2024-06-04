@@ -12,7 +12,7 @@ const ProjectLoad = (input) => {
                 {project.description && <Card.Body className="pt-1">{project.description}</Card.Body>}
                 {project.status && <Card.Body className="pt-1">Status: {project.status}</Card.Body>}
                 <Card.Footer>
-                    {project.repoURL && <Button className="mx-1" variant={"success"} href={project.repoURL}>Repo</Button>}
+                    {project.repoURL && <Button className="mx-1 mb-1" variant={"success"} href={project.repoURL}>Repo</Button>}
                     {project.projectURL && <Button className="mx-1" variant={"success"} href={project.projectURL}>Deployed Project</Button>}
                 </Card.Footer>
             </Card>
