@@ -4,6 +4,8 @@ import axios from "axios";
 import FilteredList from "../components/FilteredList";
 import { Container } from "react-bootstrap";
 
+const tagList = ["Front-End", "Back-End", "HTML", "CSS", "Javascript", "React", "JQuery", "Node.js", "MySQL", "Mongoose"];
+
 function Projects() {
     const [projects, setProjects] = useState([]);
     const [filter, setFilter] = useState({
@@ -62,40 +64,17 @@ function Projects() {
                 <h1>My Projects</h1>
             </div>
             <div>
-                <ul id="filters" className="text-center">
+                <ul id="filters" className="text-center p-0">
                     <li className="btn btn-green-inverse rounded-pill m-1" onClick={clearTags}>
                         Show All
                     </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="Front-End">Front-End</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="Back-End">Back-End</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="HTML">HTML</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="CSS">CSS</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="Javascript">JavaScript</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="React">React</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="JQuery">JQuery</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="Node.js">Node.js</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="MySQL">MySQL</span>
-                    </li>
-                    <li className="m-1" onClick={updateTags}>
-                        <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title="Mongoose">Mongoose</span>
-                    </li>
+                    {tagList.map((index) => (
+                        <li className="m-1" onClick={updateTags} key={index}>
+                            <span activeattribute="false" className="tag-button btn btn-green-inverse rounded-pill" title={index}>
+                                {index}
+                            </span>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <FilteredList projectList={projectList} chosenTags={filter.tags}/>

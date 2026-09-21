@@ -26,8 +26,8 @@ export const darkTheme = {
     navColor: "#fff",
     navColor2: "#ccc",
     navBar: "#087040",
-    btnInverse1: "#157347",
-    btnInverse2: "#198754"
+    btnInverse1: "#115435",
+    btnInverse2: "#146d43"
 }
 
 export const GlobalStyles = createGlobalStyle`
